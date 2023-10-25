@@ -1,0 +1,25 @@
+/* Exemplo de estilos adicionais para o componente de busca */
+.card {
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-title {
+  font-size: 1.25rem;
+}
+
+.card-text {
+  margin-bottom: 0.5rem;
+}
+
+.bg-success {
+  background-color: green;
+}
+
+.bg-warning {
+  background-color: yellow;
+}
+
+.bg-danger {
+  background-color: red;
+}

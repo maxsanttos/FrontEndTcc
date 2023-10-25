@@ -1,0 +1,18 @@
+.container {
+  display: flex;
+  position: relative;
+  min-height: 100vh;
+  line-height:20px;
+  z-index: auto;
+}
+
+/* Estiliza o footer */
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: #f8f9fa; /* Cor de fundo do footer */
+  border-top: 1px solid #dee2e6; /* Borda superior */
+  padding: 15px; /* Espaçamento interno do footer */
+}
+

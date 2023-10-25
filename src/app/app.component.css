@@ -1,0 +1,25 @@
+/* app.component.css */
+
+/* Estilo para a barra de navegação */
+.navbar {
+  margin-bottom: 20px;
+  background-color: blue; /* Define a cor de fundo para azul */
+}
+
+/* Estilo para os links da barra de navegação */
+.nav-link {
+  cursor: pointer;
+  margin-right: 15px;
+  font-weight: bold; /* Aplica negrito nas letras */
+  color: white; /* Define a cor do texto para branco */
+}
+
+/* Estilo para o link ativo */
+.nav-link.active {
+  font-weight: bold;
+}
+
+/* Estilo para o conteúdo do container */
+.container {
+  padding-top: 20px;
+}

@@ -1,0 +1,47 @@
+/* Estilos para a lista de tarefas */
+.task-list {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f7f7f7;
+}
+
+.task-item {
+  margin-bottom: 10px;
+  padding: 5px 10px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Estilo para a barra de navegação */
+.navbar {
+  margin-bottom: 20px;
+  background-color: #673AB7; /* Define a cor de fundo para azul */
+}
+
+/* Estilo para os links da barra de navegação */
+.nav-link {
+  cursor: pointer;
+  margin-right: 15px;
+  font-weight: bold; /* Aplica negrito nas letras */
+  color: white; /* Define a cor do texto para branco */
+}
+
+/* Estilo para o link ativo */
+.nav-link.active {
+  font-weight: bold;
+}
+
+/* Estilo para o conteúdo do container */
+.container {
+  padding-top: 20px;
+}
+
+.action-button {
+  display: block;
+  margin-top: 1px; /* Ajuste a margem conforme necessário para espaçamento desejado */
+}

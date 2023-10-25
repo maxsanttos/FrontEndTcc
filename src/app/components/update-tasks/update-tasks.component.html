@@ -1,0 +1,35 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <span>Task Manager</span>
+    <span class="example-spacer"></span>
+    <button mat-raised-button color="accent" (click)="gotBack()">Back
+      <mat-icon>logout</mat-icon>
+    </button>
+  </mat-toolbar-row>
+</mat-toolbar>
+<div class="modal-body p-5 pt-0">
+  <form (ngSubmit)="updateTask()" *ngIf="task">
+    <!-- Exiba os detalhes da tarefa e crie campos de entrada para atualização -->
+    <div class="input-group mb-3">
+      <span class="input-group-text" id="inputGroup-sizing-default">Title</span>
+      <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" [(ngModel)]="task.title" [ngModelOptions]="{standalone: true}">
+    </div>
+    <div class="input-group">
+      <span class="input-group-text">Description</span>
+      <textarea class="form-control" aria-label="With textarea" [(ngModel)]="task.description" [ngModelOptions]="{standalone: true}"></textarea>
+    </div>
+    <div class="mb-3">
+      <label for="completedStatus" class="form-label">Select me</label>
+      <select class="form-select" id="completedStatus" [(ngModel)]="task.completedStatus" [ngModelOptions]="{standalone: true}">
+        <option value="PENDING">PENDING</option>
+        <option value="IN_PROGRESS">IN_PROGRESS</option>
+        <option value="COMPLETED">COMPLETED</option>
+      </select>
+      <div class="form-text">Your role Choice</div>
+    </div>
+    <hr class="my-4">
+    <button class="w-100 mb-2 btn btn-lg rounded-3 btn-primary" type="submit">Update Task</button>
+  </form>
+</div>
+
+

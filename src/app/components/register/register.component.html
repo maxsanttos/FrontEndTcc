@@ -1,0 +1,55 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <span>Task Manager</span>
+    <span class="example-spacer"></span>
+    <button mat-raised-button color="accent" (click)="goToLogin()">Back to Login
+      <mat-icon>logout</mat-icon>
+    </button>
+  </mat-toolbar-row>
+</mat-toolbar>
+<div class="modal modal-sheet position-static d-block bg-body-secondary p-4 py-md-5" tabindex="-1" role="dialog" id="modalSignin">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content rounded-4 shadow">
+      <div class="modal-header p-5 pb-4 border-bottom-0">
+        <h1 class="fw-bold mb-0 fs-2">Register</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+
+      <div class="modal-body p-5 pt-0">
+
+        <form (ngSubmit)="register()" #registerForm="ngForm">
+          <div class="example-container">
+            <mat-form-field>
+              <mat-label>Enter your email</mat-label>
+              <input matInput placeholder="pat@example.com" [formControl]="email" [(ngModel)]="user.login"  required>
+              <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+            </mat-form-field>
+          </div>
+          <div>
+            <mat-form-field>
+              <mat-label>Enter your password</mat-label>
+              <input matInput [type]="hide ? 'password' : 'text'" [(ngModel)]="user.password" name="password" required>
+              <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+              </button>
+            </mat-form-field>
+          </div>
+          <mat-form-field>
+            <mat-label>Select me</mat-label>
+            <mat-select [(ngModel)]="user.role" [ngModelOptions]="{ standalone: true }">
+              <mat-option value="ADMIN">ADMIN</mat-option>
+              <mat-option value="USER">USER</mat-option>
+            </mat-select>
+            <mat-hint align="end">Your role Choise^</mat-hint>
+          </mat-form-field>
+          <div>
+            <button type="submit" mat-raised-button color="primary" [disabled]="registerForm.invalid">Register</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+

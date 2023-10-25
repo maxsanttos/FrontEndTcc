@@ -1,0 +1,24 @@
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-6 d-flex flex-column align-items-center">
+      <div class="card" [ngClass]="{'bg-success': task?.completedStatus === 'COMPLETED', 'bg-warning': task?.completedStatus === 'IN_PROGRESS', 'bg-danger': task?.completedStatus === 'PENDING'}">
+        <div class="card-body">
+          <h4 class="card-title">Detalhes da Tarefa</h4>
+          <ng-container *ngIf="task; else noTaskFound">
+            <p class="card-text"><strong>ID:</strong> {{ task.id }}</p>
+            <p class="card-text"><strong>Título:</strong> {{ task.title }}</p>
+            <p class="card-text"><strong>Descrição:</strong> {{ task.description }}</p>
+            <p class="card-text"><strong>Created on:</strong> {{ task.dueDate }}</p>
+            <p class="card-text"><strong>Status:</strong> {{ task.completedStatus }}</p>
+          </ng-container>
+          <ng-template #noTaskFound>
+            <p class="card-text">Nenhuma tarefa encontrada com o ID informado.</p>
+          </ng-template>
+        </div>
+      </div>
+      <div class="mt-3">
+        <button class="btn btn-primary" (click)="goBack()">Voltar para Tarefas</button>
+      </div>
+    </div>
+  </div>
+</div>

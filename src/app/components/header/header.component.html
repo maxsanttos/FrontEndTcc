@@ -1,0 +1,13 @@
+<mat-toolbar color="primary">
+  <span>Task Manager</span>
+  <span class="example-spacer"></span>
+  <input matInput  value="number" [(ngModel)]="taskId" placeholder="Insira o ID da tarefa">
+  <button mat-icon-button (click)="navigateToSearch()" aria-label="Example icon button with a vertical three dot icon">
+    <mat-icon>search</mat-icon>
+  </button>
+  <span class="example-spacer"></span>
+  <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon" (click)="logout()">
+    <mat-icon>logout</mat-icon>
+  </button>
+</mat-toolbar>
+
