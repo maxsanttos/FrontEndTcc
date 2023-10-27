@@ -7,9 +7,8 @@ import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { SearchComponent } from './components/search/search.component';
 import { TasksComponent } from './components/tasks/tasks.component';
-import { AuthGuard } from './service/AuthGuard.guard';
 import { UpdateTasksComponent } from './components/update-tasks/update-tasks.component';
-
+import { AuthGuard } from './service/AuthGuard.guard';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },

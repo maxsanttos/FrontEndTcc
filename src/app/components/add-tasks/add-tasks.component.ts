@@ -1,13 +1,12 @@
+import { DatePipe } from '@angular/common';
 import { HttpHeaders } from '@angular/common/http';
 import { Component } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AuthService } from 'src/app/service/auth.service';
 import { TaskService } from 'src/app/service/task.service';
+
 import { Task } from '../tasks/task.model';
-import { DatePipe } from '@angular/common';
-
-
 
 @Component({
   selector: 'app-add-tasks',

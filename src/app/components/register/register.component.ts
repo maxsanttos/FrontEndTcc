@@ -6,10 +6,6 @@ import { AuthService } from 'src/app/service/auth.service';
 
 import { RegistrationData } from './registration.model';
 
-
-
-
-
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',

@@ -1,9 +1,9 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable, Subject, tap } from 'rxjs';
+import { Observable, tap } from 'rxjs';
 
-import { Task } from '../components/tasks/task.model';
 import { RegistrationData } from '../components/register/registration.model';
+import { Task } from '../components/tasks/task.model';
 
 @Injectable({
   providedIn: 'root'

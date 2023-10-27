@@ -1,11 +1,10 @@
+import { HttpHeaders } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { TaskService } from 'src/app/service/task.service';
-import { Task } from '../tasks/task.model';
 import { AuthService } from 'src/app/service/auth.service';
-import { HttpHeaders } from '@angular/common/http';
+import { TaskService } from 'src/app/service/task.service';
 
-
+import { Task } from '../tasks/task.model';
 
 @Component({
   selector: 'app-update-tasks',

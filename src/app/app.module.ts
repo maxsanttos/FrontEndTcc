@@ -1,3 +1,4 @@
+import { DatePipe } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -21,7 +22,6 @@ import { RegisterComponent } from './components/register/register.component';
 import { SearchComponent } from './components/search/search.component';
 import { TasksComponent } from './components/tasks/tasks.component';
 import { UpdateTasksComponent } from './components/update-tasks/update-tasks.component';
-import { DatePipe } from '@angular/common';
 
 @NgModule({
   declarations: [
